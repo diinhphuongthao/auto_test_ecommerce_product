@@ -1,0 +1,10 @@
+ERROR: Cannot find web element located by 'By.xpath:  chrome on windows (05acf9cf3f1d17142cdc101c03d57498)] -> xpath: //div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//h2//a//span]'. Root cause: invalid selector: Unable to locate an element with the xpath expression  chrome on windows (05acf9cf3f1d17142cdc101c03d57498)] -> xpath: //div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//h2//a//span] because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string ' chrome on windows (05acf9cf3f1d17142cdc101c03d57498)] -> xpath: //div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//h2//a//span]' is not a valid XPath expression.
+  (Session info: chrome=116.0.5845.188)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [05acf9cf3f1d17142cdc101c03d57498, findElement {using=xpath, value= chrome on windows (05acf9cf3f1d17142cdc101c03d57498)] -> xpath: //div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//h2//a//span]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.188, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: C:\Users\tieuh\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50135}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50135/devtoo..., se:cdpVersion: 116.0.5845.188, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 05acf9cf3f1d17142cdc101c03d57498

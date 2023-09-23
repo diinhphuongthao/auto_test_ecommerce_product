@@ -1,0 +1,205 @@
+INFO  | 2023-09-23 08:03:23 | [main] testng.log4testng.Logger (Logger.java:info:112) - [TestNG] Running:
+  D:\VTI\Ecommerce_Product\src\main\resources\testsuites\TestSearch.xml
+
+INFO  | 2023-09-23 08:03:23 | [main] keywords.WebUI (WebUI.java:openBrowser:31) - Launching EDGE
+INFO  | 2023-09-23 08:03:33 | [main] keywords.WebUI (WebUI.java:openBrowser:36) - Launched EDGE successfully
+INFO  | 2023-09-23 08:03:33 | [main] keywords.WebUI (WebUI.java:openBrowser:44) - Navigating to 'https://www.amazon.com/'
+INFO  | 2023-09-23 08:03:35 | [main] keywords.WebUI (WebUI.java:openBrowser:46) - Navigated to 'https://www.amazon.com/' successfully
+INFO  | 2023-09-23 08:03:35 | [main] keywords.WebUI (WebUI.java:maximizeWindow:135) - Window maximized successfully
+INFO  | 2023-09-23 08:03:35 | [main] test.BaseTest (BaseTest.java:beforeClass:83) - =====================Before Class: test.TestSearch
+INFO  | 2023-09-23 08:03:35 | [main] test.BaseTest (BaseTest.java:beforeMethod:95) - ==================Before Method: P001_should_show_output_after_search
+INFO  | 2023-09-23 08:03:35 | [main] test.TestSearch (TestSearch.java:P001_should_show_output_after_search:23) - Test case: P001_should_show_output_after_search
+INFO  | 2023-09-23 08:03:35 | [main] keywords.WebUI (WebUI.java:findElement:145) - Finding web element located by 'By.xpath: //input[@id='twotabsearchtextbox']'
+INFO  | 2023-09-23 08:03:50 | [main] keywords.WebUI (WebUI.java:findElement:157) - Found 1 web element located by 'By.xpath: //input[@id='twotabsearchtextbox']'
+INFO  | 2023-09-23 08:03:50 | [main] keywords.WebUI (WebUI.java:findElement:158) - Found 1 web element located by 'By.xpath: //input[@id='twotabsearchtextbox']'
+INFO  | 2023-09-23 08:03:51 | [main] keywords.WebUI (WebUI.java:sendKeys:329) - Entered text 'iphone 11' into element: //input[@id='twotabsearchtextbox']
+INFO  | 2023-09-23 08:03:52 | [main] keywords.WebUI (WebUI.java:delayInSecond:999) - Delayed '1' seconds
+INFO  | 2023-09-23 08:03:52 | [main] keywords.WebUI (WebUI.java:findElement:145) - Finding web element located by 'By.xpath: //input[@id='nav-search-submit-button']'
+INFO  | 2023-09-23 08:03:52 | [main] keywords.WebUI (WebUI.java:findElement:157) - Found 1 web element located by 'By.xpath: //input[@id='nav-search-submit-button']'
+INFO  | 2023-09-23 08:03:52 | [main] keywords.WebUI (WebUI.java:findElement:158) - Found 1 web element located by 'By.xpath: //input[@id='nav-search-submit-button']'
+INFO  | 2023-09-23 08:03:54 | [main] keywords.WebUI (WebUI.java:clickElement:357) - Clicked element: //input[@id='nav-search-submit-button']
+INFO  | 2023-09-23 08:03:57 | [main] keywords.WebUI (WebUI.java:delayInSecond:999) - Delayed '3' seconds
+INFO  | 2023-09-23 08:03:57 | [main] keywords.WebUI (WebUI.java:findElements:242) - Finding web element located by '//div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//h2//a//span'
+INFO  | 2023-09-23 08:03:57 | [main] keywords.WebUI (WebUI.java:findElements:245) - Found 16 web element(s) located by '//div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//h2//a//span'
+INFO  | 2023-09-23 08:03:57 | [main] keywords.WebUI (WebUI.java:scrollToElementCenter:1517) - Scrolled to element: [[EdgeDriver: msedge on windows (224224c52ce3dd1704cf7594d8339854)] -> xpath: //div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//h2//a//span]
+INFO  | 2023-09-23 08:04:01 | [main] keywords.WebUI (WebUI.java:delayInSecond:999) - Delayed '4' seconds
+INFO  | 2023-09-23 08:04:02 | [main] keywords.WebUI (WebUI.java:getElementText:690) - Text of web element located by '[[EdgeDriver: msedge on windows (224224c52ce3dd1704cf7594d8339854)] -> xpath: //div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//h2//a//span]' is 'Original Unlocked Apple iPhone 11 64GB/128GB/256GB 3110mAh Dual 12MP Camera A13 6.1 inch LCD Screen iOS LTE 4G iphone11 64GB Simple Set/Red'
+INFO  | 2023-09-23 08:04:02 | [main] keywords.WebUI (WebUI.java:findElementWithParam:1414) - Finding web element located by '//div[@data-component-type='s-search-result'][0]//div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//a/span[@class='a-price']'
+ERROR | 2023-09-23 08:04:12 | [main] keywords.WebUI (WebUI.java:findElementWithParam:1439) - Cannot find web element located by '//div[@data-component-type='s-search-result'][0]//div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//a/span[@class='a-price']'. Root cause: Expected condition failed: waiting for keywords.WebUI$4@5ca8bd01 (tried for 10 second(s) with 5000 milliseconds interval)
+INFO  | 2023-09-23 08:04:12 | [main] keywords.WebUI (WebUI.java:findElementWithParam:1444) - Timeout: '10.085'
+INFO  | 2023-09-23 08:04:12 | [main] keywords.WebUI (WebUI.java:scrollToElementCenter:1517) - Scrolled to element: [[EdgeDriver: msedge on windows (224224c52ce3dd1704cf7594d8339854)] -> xpath: //div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//h2//a//span]
+INFO  | 2023-09-23 08:04:16 | [main] keywords.WebUI (WebUI.java:delayInSecond:999) - Delayed '4' seconds
+INFO  | 2023-09-23 08:04:16 | [main] keywords.WebUI (WebUI.java:getElementText:690) - Text of web element located by '[[EdgeDriver: msedge on windows (224224c52ce3dd1704cf7594d8339854)] -> xpath: //div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//h2//a//span]' is 'Apple iPhone 12 Mini, 64GB, Blue - Unlocked (Renewed)'
+INFO  | 2023-09-23 08:04:16 | [main] keywords.WebUI (WebUI.java:findElementWithParam:1414) - Finding web element located by '//div[@data-component-type='s-search-result'][1]//div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//a/span[@class='a-price']'
+ERROR | 2023-09-23 08:04:26 | [main] keywords.WebUI (WebUI.java:findElementWithParam:1439) - Cannot find web element located by '//div[@data-component-type='s-search-result'][1]//div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//a/span[@class='a-price']'. Root cause: Expected condition failed: waiting for keywords.WebUI$4@186d6033 (tried for 10 second(s) with 5000 milliseconds interval)
+INFO  | 2023-09-23 08:04:26 | [main] keywords.WebUI (WebUI.java:findElementWithParam:1444) - Timeout: '10.076'
+INFO  | 2023-09-23 08:04:26 | [main] keywords.WebUI (WebUI.java:scrollToElementCenter:1517) - Scrolled to element: [[EdgeDriver: msedge on windows (224224c52ce3dd1704cf7594d8339854)] -> xpath: //div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//h2//a//span]
+INFO  | 2023-09-23 08:04:30 | [main] keywords.WebUI (WebUI.java:delayInSecond:999) - Delayed '4' seconds
+INFO  | 2023-09-23 08:04:30 | [main] keywords.WebUI (WebUI.java:getElementText:690) - Text of web element located by '[[EdgeDriver: msedge on windows (224224c52ce3dd1704cf7594d8339854)] -> xpath: //div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//h2//a//span]' is 'Apple iPhone 11 Pro Max, 256GB, Space Gray - Unlocked (Renewed Premium)'
+INFO  | 2023-09-23 08:04:30 | [main] keywords.WebUI (WebUI.java:findElementWithParam:1414) - Finding web element located by '//div[@data-component-type='s-search-result'][2]//div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//a/span[@class='a-price']'
+INFO  | 2023-09-23 08:04:30 | [main] keywords.WebUI (WebUI.java:findElementWithParam:1436) - Found 1 web element located by '//div[@data-component-type='s-search-result'][2]//div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//a/span[@class='a-price']'
+INFO  | 2023-09-23 08:04:30 | [main] keywords.WebUI (WebUI.java:findElementWithParam:1444) - Timeout: '0.017'
+INFO  | 2023-09-23 08:04:30 | [main] keywords.WebUI (WebUI.java:getElementText:690) - Text of web element located by '[[EdgeDriver: msedge on windows (224224c52ce3dd1704cf7594d8339854)] -> xpath: //div[@data-component-type='s-search-result'][2]//div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//a/span[@class='a-price']]' is '$285
+00'
+INFO  | 2023-09-23 08:04:30 | [main] keywords.WebUI (WebUI.java:scrollToElementCenter:1517) - Scrolled to element: [[EdgeDriver: msedge on windows (224224c52ce3dd1704cf7594d8339854)] -> xpath: //div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//h2//a//span]
+INFO  | 2023-09-23 08:04:34 | [main] keywords.WebUI (WebUI.java:delayInSecond:999) - Delayed '4' seconds
+INFO  | 2023-09-23 08:04:34 | [main] keywords.WebUI (WebUI.java:getElementText:690) - Text of web element located by '[[EdgeDriver: msedge on windows (224224c52ce3dd1704cf7594d8339854)] -> xpath: //div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//h2//a//span]' is 'Motorola Moto G Stylus | 2022 | 2-Day Battery | Unlocked | Made for US 4/128GB | 50MP Camera | Twilight Blue'
+INFO  | 2023-09-23 08:04:34 | [main] keywords.WebUI (WebUI.java:findElementWithParam:1414) - Finding web element located by '//div[@data-component-type='s-search-result'][3]//div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//a/span[@class='a-price']'
+INFO  | 2023-09-23 08:04:34 | [main] keywords.WebUI (WebUI.java:findElementWithParam:1436) - Found 1 web element located by '//div[@data-component-type='s-search-result'][3]//div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//a/span[@class='a-price']'
+INFO  | 2023-09-23 08:04:34 | [main] keywords.WebUI (WebUI.java:findElementWithParam:1444) - Timeout: '0.021'
+INFO  | 2023-09-23 08:04:34 | [main] keywords.WebUI (WebUI.java:getElementText:690) - Text of web element located by '[[EdgeDriver: msedge on windows (224224c52ce3dd1704cf7594d8339854)] -> xpath: //div[@data-component-type='s-search-result'][3]//div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//a/span[@class='a-price']]' is '$580
+00'
+INFO  | 2023-09-23 08:04:34 | [main] keywords.WebUI (WebUI.java:scrollToElementCenter:1517) - Scrolled to element: [[EdgeDriver: msedge on windows (224224c52ce3dd1704cf7594d8339854)] -> xpath: //div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//h2//a//span]
+INFO  | 2023-09-23 08:04:38 | [main] keywords.WebUI (WebUI.java:delayInSecond:999) - Delayed '4' seconds
+INFO  | 2023-09-23 08:04:38 | [main] keywords.WebUI (WebUI.java:getElementText:690) - Text of web element located by '[[EdgeDriver: msedge on windows (224224c52ce3dd1704cf7594d8339854)] -> xpath: //div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//h2//a//span]' is 'Apple iPhone 12, 64GB, Red - Unlocked (Renewed Premium)'
+INFO  | 2023-09-23 08:04:38 | [main] keywords.WebUI (WebUI.java:findElementWithParam:1414) - Finding web element located by '//div[@data-component-type='s-search-result'][4]//div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//a/span[@class='a-price']'
+INFO  | 2023-09-23 08:04:38 | [main] keywords.WebUI (WebUI.java:findElementWithParam:1436) - Found 1 web element located by '//div[@data-component-type='s-search-result'][4]//div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//a/span[@class='a-price']'
+INFO  | 2023-09-23 08:04:38 | [main] keywords.WebUI (WebUI.java:findElementWithParam:1444) - Timeout: '0.017'
+INFO  | 2023-09-23 08:04:38 | [main] keywords.WebUI (WebUI.java:getElementText:690) - Text of web element located by '[[EdgeDriver: msedge on windows (224224c52ce3dd1704cf7594d8339854)] -> xpath: //div[@data-component-type='s-search-result'][4]//div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//a/span[@class='a-price']]' is '$91
+81'
+INFO  | 2023-09-23 08:04:38 | [main] keywords.WebUI (WebUI.java:scrollToElementCenter:1517) - Scrolled to element: [[EdgeDriver: msedge on windows (224224c52ce3dd1704cf7594d8339854)] -> xpath: //div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//h2//a//span]
+INFO  | 2023-09-23 08:04:42 | [main] keywords.WebUI (WebUI.java:delayInSecond:999) - Delayed '4' seconds
+INFO  | 2023-09-23 08:04:42 | [main] keywords.WebUI (WebUI.java:getElementText:690) - Text of web element located by '[[EdgeDriver: msedge on windows (224224c52ce3dd1704cf7594d8339854)] -> xpath: //div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//h2//a//span]' is 'SAMSUNG Galaxy S23 Ultra Cell Phone, Factory Unlocked Android Smartphone, 256GB, 200MP Camera, Night Mode, Long Battery Life, S Pen, US Version, 2023, Green'
+INFO  | 2023-09-23 08:04:42 | [main] keywords.WebUI (WebUI.java:findElementWithParam:1414) - Finding web element located by '//div[@data-component-type='s-search-result'][5]//div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//a/span[@class='a-price']'
+INFO  | 2023-09-23 08:04:42 | [main] keywords.WebUI (WebUI.java:findElementWithParam:1436) - Found 1 web element located by '//div[@data-component-type='s-search-result'][5]//div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//a/span[@class='a-price']'
+INFO  | 2023-09-23 08:04:42 | [main] keywords.WebUI (WebUI.java:findElementWithParam:1444) - Timeout: '0.024'
+INFO  | 2023-09-23 08:04:42 | [main] keywords.WebUI (WebUI.java:getElementText:690) - Text of web element located by '[[EdgeDriver: msedge on windows (224224c52ce3dd1704cf7594d8339854)] -> xpath: //div[@data-component-type='s-search-result'][5]//div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//a/span[@class='a-price']]' is '$449
+99'
+INFO  | 2023-09-23 08:04:42 | [main] keywords.WebUI (WebUI.java:scrollToElementCenter:1517) - Scrolled to element: [[EdgeDriver: msedge on windows (224224c52ce3dd1704cf7594d8339854)] -> xpath: //div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//h2//a//span]
+INFO  | 2023-09-23 08:04:46 | [main] keywords.WebUI (WebUI.java:delayInSecond:999) - Delayed '4' seconds
+INFO  | 2023-09-23 08:04:46 | [main] keywords.WebUI (WebUI.java:getElementText:690) - Text of web element located by '[[EdgeDriver: msedge on windows (224224c52ce3dd1704cf7594d8339854)] -> xpath: //div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//h2//a//span]' is 'Motorola Moto G Stylus 5G | 2021 | 2-Day Battery | Unlocked | Made for US 4/128GB | 48MP Camera | Cosmic Emerald'
+INFO  | 2023-09-23 08:04:46 | [main] keywords.WebUI (WebUI.java:findElementWithParam:1414) - Finding web element located by '//div[@data-component-type='s-search-result'][6]//div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//a/span[@class='a-price']'
+INFO  | 2023-09-23 08:04:46 | [main] keywords.WebUI (WebUI.java:findElementWithParam:1436) - Found 1 web element located by '//div[@data-component-type='s-search-result'][6]//div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//a/span[@class='a-price']'
+INFO  | 2023-09-23 08:04:46 | [main] keywords.WebUI (WebUI.java:findElementWithParam:1444) - Timeout: '0.037'
+INFO  | 2023-09-23 08:04:46 | [main] keywords.WebUI (WebUI.java:getElementText:690) - Text of web element located by '[[EdgeDriver: msedge on windows (224224c52ce3dd1704cf7594d8339854)] -> xpath: //div[@data-component-type='s-search-result'][6]//div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//a/span[@class='a-price']]' is '$999
+99'
+INFO  | 2023-09-23 08:04:46 | [main] keywords.WebUI (WebUI.java:scrollToElementCenter:1517) - Scrolled to element: [[EdgeDriver: msedge on windows (224224c52ce3dd1704cf7594d8339854)] -> xpath: //div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//h2//a//span]
+INFO  | 2023-09-23 08:04:50 | [main] keywords.WebUI (WebUI.java:delayInSecond:999) - Delayed '4' seconds
+INFO  | 2023-09-23 08:04:50 | [main] keywords.WebUI (WebUI.java:getElementText:690) - Text of web element located by '[[EdgeDriver: msedge on windows (224224c52ce3dd1704cf7594d8339854)] -> xpath: //div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//h2//a//span]' is 'OnePlus 11 5G | 16GB RAM+256GB | Dual-SIM | Titan Black | US Factory Unlocked Android Smartphone | 5000 mAh battery | 80W Fast charging | Hasselblad Camera | 120Hz Fluid Display | 4nm Processor'
+INFO  | 2023-09-23 08:04:50 | [main] keywords.WebUI (WebUI.java:findElementWithParam:1414) - Finding web element located by '//div[@data-component-type='s-search-result'][7]//div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//a/span[@class='a-price']'
+INFO  | 2023-09-23 08:04:50 | [main] keywords.WebUI (WebUI.java:findElementWithParam:1436) - Found 1 web element located by '//div[@data-component-type='s-search-result'][7]//div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//a/span[@class='a-price']'
+INFO  | 2023-09-23 08:04:50 | [main] keywords.WebUI (WebUI.java:findElementWithParam:1444) - Timeout: '0.016'
+INFO  | 2023-09-23 08:04:50 | [main] keywords.WebUI (WebUI.java:getElementText:690) - Text of web element located by '[[EdgeDriver: msedge on windows (224224c52ce3dd1704cf7594d8339854)] -> xpath: //div[@data-component-type='s-search-result'][7]//div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//a/span[@class='a-price']]' is '$149
+99'
+INFO  | 2023-09-23 08:04:50 | [main] keywords.WebUI (WebUI.java:scrollToElementCenter:1517) - Scrolled to element: [[EdgeDriver: msedge on windows (224224c52ce3dd1704cf7594d8339854)] -> xpath: //div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//h2//a//span]
+INFO  | 2023-09-23 08:04:54 | [main] keywords.WebUI (WebUI.java:delayInSecond:999) - Delayed '4' seconds
+INFO  | 2023-09-23 08:04:54 | [main] keywords.WebUI (WebUI.java:getElementText:690) - Text of web element located by '[[EdgeDriver: msedge on windows (224224c52ce3dd1704cf7594d8339854)] -> xpath: //div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//h2//a//span]' is 'iPhone 13 Pro, 256GB, Graphite - Unlocked (Renewed Premium)'
+INFO  | 2023-09-23 08:04:54 | [main] keywords.WebUI (WebUI.java:findElementWithParam:1414) - Finding web element located by '//div[@data-component-type='s-search-result'][8]//div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//a/span[@class='a-price']'
+INFO  | 2023-09-23 08:04:54 | [main] keywords.WebUI (WebUI.java:findElementWithParam:1436) - Found 1 web element located by '//div[@data-component-type='s-search-result'][8]//div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//a/span[@class='a-price']'
+INFO  | 2023-09-23 08:04:54 | [main] keywords.WebUI (WebUI.java:findElementWithParam:1444) - Timeout: '0.016'
+INFO  | 2023-09-23 08:04:54 | [main] keywords.WebUI (WebUI.java:getElementText:690) - Text of web element located by '[[EdgeDriver: msedge on windows (224224c52ce3dd1704cf7594d8339854)] -> xpath: //div[@data-component-type='s-search-result'][8]//div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//a/span[@class='a-price']]' is '$649
+99'
+INFO  | 2023-09-23 08:04:54 | [main] keywords.WebUI (WebUI.java:scrollToElementCenter:1517) - Scrolled to element: [[EdgeDriver: msedge on windows (224224c52ce3dd1704cf7594d8339854)] -> xpath: //div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//h2//a//span]
+INFO  | 2023-09-23 08:04:58 | [main] keywords.WebUI (WebUI.java:delayInSecond:999) - Delayed '4' seconds
+INFO  | 2023-09-23 08:04:58 | [main] keywords.WebUI (WebUI.java:getElementText:690) - Text of web element located by '[[EdgeDriver: msedge on windows (224224c52ce3dd1704cf7594d8339854)] -> xpath: //div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//h2//a//span]' is 'VIQEE Rion9Pro 5G Unlocked Cell Phones,6G+256GB Dual Sim Smartphone, Unlocked Mobile Phone with 6.72inch Waterdrop Screen, Android Phone 48+108 MP | 6800mAh | Fingerprint Lock & Face ID | (Green)'
+INFO  | 2023-09-23 08:04:58 | [main] keywords.WebUI (WebUI.java:findElementWithParam:1414) - Finding web element located by '//div[@data-component-type='s-search-result'][9]//div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//a/span[@class='a-price']'
+INFO  | 2023-09-23 08:04:58 | [main] keywords.WebUI (WebUI.java:findElementWithParam:1436) - Found 1 web element located by '//div[@data-component-type='s-search-result'][9]//div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//a/span[@class='a-price']'
+INFO  | 2023-09-23 08:04:58 | [main] keywords.WebUI (WebUI.java:findElementWithParam:1444) - Timeout: '0.017'
+INFO  | 2023-09-23 08:04:58 | [main] keywords.WebUI (WebUI.java:getElementText:690) - Text of web element located by '[[EdgeDriver: msedge on windows (224224c52ce3dd1704cf7594d8339854)] -> xpath: //div[@data-component-type='s-search-result'][9]//div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//a/span[@class='a-price']]' is '$880
+41'
+INFO  | 2023-09-23 08:04:58 | [main] keywords.WebUI (WebUI.java:scrollToElementCenter:1517) - Scrolled to element: [[EdgeDriver: msedge on windows (224224c52ce3dd1704cf7594d8339854)] -> xpath: //div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//h2//a//span]
+INFO  | 2023-09-23 08:05:02 | [main] keywords.WebUI (WebUI.java:delayInSecond:999) - Delayed '4' seconds
+INFO  | 2023-09-23 08:05:02 | [main] keywords.WebUI (WebUI.java:getElementText:690) - Text of web element located by '[[EdgeDriver: msedge on windows (224224c52ce3dd1704cf7594d8339854)] -> xpath: //div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//h2//a//span]' is 'OnePlus Nord N30 5G | Unlocked Dual-SIM Android Smart Phone | 6.7" LCD Display | 8 +128GB | 5000 mAh Battery | 50W Fast Charging | 108MP Camera | Chromatic Gray'
+INFO  | 2023-09-23 08:05:02 | [main] keywords.WebUI (WebUI.java:findElementWithParam:1414) - Finding web element located by '//div[@data-component-type='s-search-result'][10]//div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//a/span[@class='a-price']'
+ERROR | 2023-09-23 08:05:12 | [main] keywords.WebUI (WebUI.java:findElementWithParam:1439) - Cannot find web element located by '//div[@data-component-type='s-search-result'][10]//div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//a/span[@class='a-price']'. Root cause: Expected condition failed: waiting for keywords.WebUI$4@7bde704a (tried for 10 second(s) with 5000 milliseconds interval)
+INFO  | 2023-09-23 08:05:12 | [main] keywords.WebUI (WebUI.java:findElementWithParam:1444) - Timeout: '10.056'
+INFO  | 2023-09-23 08:05:12 | [main] keywords.WebUI (WebUI.java:scrollToElementCenter:1517) - Scrolled to element: [[EdgeDriver: msedge on windows (224224c52ce3dd1704cf7594d8339854)] -> xpath: //div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//h2//a//span]
+INFO  | 2023-09-23 08:05:17 | [main] keywords.WebUI (WebUI.java:delayInSecond:999) - Delayed '4' seconds
+INFO  | 2023-09-23 08:05:17 | [main] keywords.WebUI (WebUI.java:getElementText:690) - Text of web element located by '[[EdgeDriver: msedge on windows (224224c52ce3dd1704cf7594d8339854)] -> xpath: //div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//h2//a//span]' is 'TracFone Apple iPhone SE 5G (3rd Generation), 64GB, Black - Prepaid Smartphone (Locked)'
+INFO  | 2023-09-23 08:05:17 | [main] keywords.WebUI (WebUI.java:findElementWithParam:1414) - Finding web element located by '//div[@data-component-type='s-search-result'][11]//div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//a/span[@class='a-price']'
+INFO  | 2023-09-23 08:05:17 | [main] keywords.WebUI (WebUI.java:findElementWithParam:1436) - Found 1 web element located by '//div[@data-component-type='s-search-result'][11]//div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//a/span[@class='a-price']'
+INFO  | 2023-09-23 08:05:17 | [main] keywords.WebUI (WebUI.java:findElementWithParam:1444) - Timeout: '0.034'
+INFO  | 2023-09-23 08:05:17 | [main] keywords.WebUI (WebUI.java:getElementText:690) - Text of web element located by '[[EdgeDriver: msedge on windows (224224c52ce3dd1704cf7594d8339854)] -> xpath: //div[@data-component-type='s-search-result'][11]//div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//a/span[@class='a-price']]' is '$269
+99'
+INFO  | 2023-09-23 08:05:17 | [main] keywords.WebUI (WebUI.java:scrollToElementCenter:1517) - Scrolled to element: [[EdgeDriver: msedge on windows (224224c52ce3dd1704cf7594d8339854)] -> xpath: //div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//h2//a//span]
+INFO  | 2023-09-23 08:05:21 | [main] keywords.WebUI (WebUI.java:delayInSecond:999) - Delayed '4' seconds
+INFO  | 2023-09-23 08:05:21 | [main] keywords.WebUI (WebUI.java:getElementText:690) - Text of web element located by '[[EdgeDriver: msedge on windows (224224c52ce3dd1704cf7594d8339854)] -> xpath: //div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//h2//a//span]' is 'Total by Verizon Samsung Galaxy A03s, 32GB, Black - Prepaid Smartphone (Locked)'
+INFO  | 2023-09-23 08:05:21 | [main] keywords.WebUI (WebUI.java:findElementWithParam:1414) - Finding web element located by '//div[@data-component-type='s-search-result'][12]//div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//a/span[@class='a-price']'
+INFO  | 2023-09-23 08:05:21 | [main] keywords.WebUI (WebUI.java:findElementWithParam:1436) - Found 1 web element located by '//div[@data-component-type='s-search-result'][12]//div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//a/span[@class='a-price']'
+INFO  | 2023-09-23 08:05:21 | [main] keywords.WebUI (WebUI.java:findElementWithParam:1444) - Timeout: '0.024'
+INFO  | 2023-09-23 08:05:21 | [main] keywords.WebUI (WebUI.java:getElementText:690) - Text of web element located by '[[EdgeDriver: msedge on windows (224224c52ce3dd1704cf7594d8339854)] -> xpath: //div[@data-component-type='s-search-result'][12]//div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//a/span[@class='a-price']]' is '$189
+00'
+INFO  | 2023-09-23 08:05:21 | [main] keywords.WebUI (WebUI.java:scrollToElementCenter:1517) - Scrolled to element: [[EdgeDriver: msedge on windows (224224c52ce3dd1704cf7594d8339854)] -> xpath: //div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//h2//a//span]
+INFO  | 2023-09-23 08:05:25 | [main] keywords.WebUI (WebUI.java:delayInSecond:999) - Delayed '4' seconds
+INFO  | 2023-09-23 08:05:25 | [main] keywords.WebUI (WebUI.java:getElementText:690) - Text of web element located by '[[EdgeDriver: msedge on windows (224224c52ce3dd1704cf7594d8339854)] -> xpath: //div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//h2//a//span]' is 'Nokia C21 Plus | Android 11 (Go Edition) | Unlocked Smartphone | 2-Day Battery | Dual SIM | 2/64GB | 6.52-Inch Screen | Charcoal'
+INFO  | 2023-09-23 08:05:25 | [main] keywords.WebUI (WebUI.java:findElementWithParam:1414) - Finding web element located by '//div[@data-component-type='s-search-result'][13]//div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//a/span[@class='a-price']'
+INFO  | 2023-09-23 08:05:25 | [main] keywords.WebUI (WebUI.java:findElementWithParam:1436) - Found 1 web element located by '//div[@data-component-type='s-search-result'][13]//div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//a/span[@class='a-price']'
+INFO  | 2023-09-23 08:05:25 | [main] keywords.WebUI (WebUI.java:findElementWithParam:1444) - Timeout: '0.022'
+INFO  | 2023-09-23 08:05:25 | [main] keywords.WebUI (WebUI.java:getElementText:690) - Text of web element located by '[[EdgeDriver: msedge on windows (224224c52ce3dd1704cf7594d8339854)] -> xpath: //div[@data-component-type='s-search-result'][13]//div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//a/span[@class='a-price']]' is '$49
+88'
+INFO  | 2023-09-23 08:05:25 | [main] keywords.WebUI (WebUI.java:scrollToElementCenter:1517) - Scrolled to element: [[EdgeDriver: msedge on windows (224224c52ce3dd1704cf7594d8339854)] -> xpath: //div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//h2//a//span]
+INFO  | 2023-09-23 08:05:29 | [main] keywords.WebUI (WebUI.java:delayInSecond:999) - Delayed '4' seconds
+INFO  | 2023-09-23 08:05:29 | [main] keywords.WebUI (WebUI.java:getElementText:690) - Text of web element located by '[[EdgeDriver: msedge on windows (224224c52ce3dd1704cf7594d8339854)] -> xpath: //div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//h2//a//span]' is 'Google Pixel 7-5G Android Phone - Unlocked Smartphone with Wide Angle Lens and 24-Hour Battery - 128GB - Obsidian'
+INFO  | 2023-09-23 08:05:29 | [main] keywords.WebUI (WebUI.java:findElementWithParam:1414) - Finding web element located by '//div[@data-component-type='s-search-result'][14]//div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//a/span[@class='a-price']'
+INFO  | 2023-09-23 08:05:29 | [main] keywords.WebUI (WebUI.java:findElementWithParam:1436) - Found 1 web element located by '//div[@data-component-type='s-search-result'][14]//div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//a/span[@class='a-price']'
+INFO  | 2023-09-23 08:05:29 | [main] keywords.WebUI (WebUI.java:findElementWithParam:1444) - Timeout: '0.015'
+INFO  | 2023-09-23 08:05:29 | [main] keywords.WebUI (WebUI.java:getElementText:690) - Text of web element located by '[[EdgeDriver: msedge on windows (224224c52ce3dd1704cf7594d8339854)] -> xpath: //div[@data-component-type='s-search-result'][14]//div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//a/span[@class='a-price']]' is '$90
+46'
+INFO  | 2023-09-23 08:05:29 | [main] keywords.WebUI (WebUI.java:scrollToElementCenter:1517) - Scrolled to element: [[EdgeDriver: msedge on windows (224224c52ce3dd1704cf7594d8339854)] -> xpath: //div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//h2//a//span]
+INFO  | 2023-09-23 08:05:33 | [main] keywords.WebUI (WebUI.java:delayInSecond:999) - Delayed '4' seconds
+INFO  | 2023-09-23 08:05:33 | [main] keywords.WebUI (WebUI.java:getElementText:690) - Text of web element located by '[[EdgeDriver: msedge on windows (224224c52ce3dd1704cf7594d8339854)] -> xpath: //div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//h2//a//span]' is 'Xiaomi 12 Lite 5G + 4G LTE (128GB + 6GB) Global Version Unlocked 6.55" 108MP Triple Camera (Not for Verizon Boost At&T Cricket Straight) + (w/Fast Car 51W Charger Bundle) (Lite Black)'
+INFO  | 2023-09-23 08:05:33 | [main] keywords.WebUI (WebUI.java:findElementWithParam:1414) - Finding web element located by '//div[@data-component-type='s-search-result'][15]//div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//a/span[@class='a-price']'
+INFO  | 2023-09-23 08:05:33 | [main] keywords.WebUI (WebUI.java:findElementWithParam:1436) - Found 1 web element located by '//div[@data-component-type='s-search-result'][15]//div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//a/span[@class='a-price']'
+INFO  | 2023-09-23 08:05:33 | [main] keywords.WebUI (WebUI.java:findElementWithParam:1444) - Timeout: '0.023'
+INFO  | 2023-09-23 08:05:33 | [main] keywords.WebUI (WebUI.java:getElementText:690) - Text of web element located by '[[EdgeDriver: msedge on windows (224224c52ce3dd1704cf7594d8339854)] -> xpath: //div[@data-component-type='s-search-result'][15]//div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//a/span[@class='a-price']]' is '$449
+00'
+INFO  | 2023-09-23 08:05:35 | [main] keywords.WebUI (WebUI.java:delayInSecond:999) - Delayed '2' seconds
+INFO  | 2023-09-23 08:05:35 | [main] keywords.WebUI (WebUI.java:navigateToUrl:96) - Navigating to 'https://www.ebay.com/'
+INFO  | 2023-09-23 08:05:37 | [main] keywords.WebUI (WebUI.java:navigateToUrl:98) - Navigated to 'https://www.ebay.com/' successfully
+INFO  | 2023-09-23 08:05:37 | [main] keywords.WebUI (WebUI.java:findElement:145) - Finding web element located by 'By.xpath: //input[@id='gh-ac']'
+INFO  | 2023-09-23 08:05:37 | [main] keywords.WebUI (WebUI.java:findElement:157) - Found 1 web element located by 'By.xpath: //input[@id='gh-ac']'
+INFO  | 2023-09-23 08:05:37 | [main] keywords.WebUI (WebUI.java:findElement:158) - Found 1 web element located by 'By.xpath: //input[@id='gh-ac']'
+INFO  | 2023-09-23 08:05:37 | [main] keywords.WebUI (WebUI.java:sendKeys:329) - Entered text 'iphone 11' into element: //input[@id='gh-ac']
+INFO  | 2023-09-23 08:05:37 | [main] keywords.WebUI (WebUI.java:findElement:145) - Finding web element located by 'By.xpath: //input[@id='gh-btn']'
+INFO  | 2023-09-23 08:05:38 | [main] keywords.WebUI (WebUI.java:findElement:157) - Found 1 web element located by 'By.xpath: //input[@id='gh-btn']'
+INFO  | 2023-09-23 08:05:38 | [main] keywords.WebUI (WebUI.java:findElement:158) - Found 1 web element located by 'By.xpath: //input[@id='gh-btn']'
+INFO  | 2023-09-23 08:05:41 | [main] keywords.WebUI (WebUI.java:clickElement:357) - Clicked element: //input[@id='gh-btn']
+INFO  | 2023-09-23 08:05:43 | [main] keywords.WebUI (WebUI.java:delayInSecond:999) - Delayed '2' seconds
+INFO  | 2023-09-23 08:05:43 | [main] keywords.WebUI (WebUI.java:findElements:242) - Finding web element located by '(//li[@id]//a[@class='s-item__link'])'
+INFO  | 2023-09-23 08:05:43 | [main] keywords.WebUI (WebUI.java:findElements:245) - Found 61 web element(s) located by '(//li[@id]//a[@class='s-item__link'])'
+INFO  | 2023-09-23 08:05:43 | [main] keywords.WebUI (WebUI.java:scrollToElementCenter:1517) - Scrolled to element: [[EdgeDriver: msedge on windows (224224c52ce3dd1704cf7594d8339854)] -> xpath: (//li[@id]//a[@class='s-item__link'])]
+INFO  | 2023-09-23 08:05:47 | [main] keywords.WebUI (WebUI.java:delayInSecond:999) - Delayed '4' seconds
+INFO  | 2023-09-23 08:05:47 | [main] keywords.WebUI (WebUI.java:getElementText:690) - Text of web element located by '[[EdgeDriver: msedge on windows (224224c52ce3dd1704cf7594d8339854)] -> xpath: (//li[@id]//a[@class='s-item__link'])]' is ''
+INFO  | 2023-09-23 08:05:47 | [main] keywords.WebUI (WebUI.java:findElementsWithParam:1451) - Finding web elements located by '(//ul[contains(@class, 'srp-results')]/li[contains(@class, 's-item')][0]//div[contains(@class,'s-item')]/span[contains(@class,'s-item__price')])'
+INFO  | 2023-09-23 08:05:47 | [main] keywords.WebUI (WebUI.java:findElementsWithParam:1473) - Found 0 web elements located by '(//ul[contains(@class, 'srp-results')]/li[contains(@class, 's-item')][0]//div[contains(@class,'s-item')]/span[contains(@class,'s-item__price')])'
+INFO  | 2023-09-23 08:05:47 | [main] keywords.WebUI (WebUI.java:findElementsWithParam:1480) - Timeout: '0.043'
+INFO  | 2023-09-23 08:05:47 | [main] keywords.WebUI (WebUI.java:scrollToElementCenter:1517) - Scrolled to element: [[EdgeDriver: msedge on windows (224224c52ce3dd1704cf7594d8339854)] -> xpath: (//li[@id]//a[@class='s-item__link'])]
+INFO  | 2023-09-23 08:05:51 | [main] keywords.WebUI (WebUI.java:delayInSecond:999) - Delayed '4' seconds
+INFO  | 2023-09-23 08:05:51 | [main] keywords.WebUI (WebUI.java:getElementText:690) - Text of web element located by '[[EdgeDriver: msedge on windows (224224c52ce3dd1704cf7594d8339854)] -> xpath: (//li[@id]//a[@class='s-item__link'])]' is 'iPhone 11 - 128GB - Black (READ DESCRIPTION)
+Opens in a new window or tab'
+INFO  | 2023-09-23 08:05:51 | [main] keywords.WebUI (WebUI.java:findElementsWithParam:1451) - Finding web elements located by '(//ul[contains(@class, 'srp-results')]/li[contains(@class, 's-item')][1]//div[contains(@class,'s-item')]/span[contains(@class,'s-item__price')])'
+INFO  | 2023-09-23 08:05:51 | [main] keywords.WebUI (WebUI.java:findElementsWithParam:1473) - Found 1 web elements located by '(//ul[contains(@class, 'srp-results')]/li[contains(@class, 's-item')][1]//div[contains(@class,'s-item')]/span[contains(@class,'s-item__price')])'
+INFO  | 2023-09-23 08:05:51 | [main] keywords.WebUI (WebUI.java:findElementsWithParam:1480) - Timeout: '0.02'
+INFO  | 2023-09-23 08:05:51 | [main] keywords.WebUI (WebUI.java:scrollToElementCenter:1517) - Scrolled to element: [[EdgeDriver: msedge on windows (224224c52ce3dd1704cf7594d8339854)] -> xpath: (//li[@id]//a[@class='s-item__link'])]
+INFO  | 2023-09-23 08:05:55 | [main] keywords.WebUI (WebUI.java:delayInSecond:999) - Delayed '4' seconds
+INFO  | 2023-09-23 08:05:55 | [main] keywords.WebUI (WebUI.java:getElementText:690) - Text of web element located by '[[EdgeDriver: msedge on windows (224224c52ce3dd1704cf7594d8339854)] -> xpath: (//li[@id]//a[@class='s-item__link'])]' is 'iphone 11 pro Cheap
+Opens in a new window or tab'
+INFO  | 2023-09-23 08:05:55 | [main] keywords.WebUI (WebUI.java:findElementsWithParam:1451) - Finding web elements located by '(//ul[contains(@class, 'srp-results')]/li[contains(@class, 's-item')][2]//div[contains(@class,'s-item')]/span[contains(@class,'s-item__price')])'
+INFO  | 2023-09-23 08:05:55 | [main] keywords.WebUI (WebUI.java:findElementsWithParam:1473) - Found 1 web elements located by '(//ul[contains(@class, 'srp-results')]/li[contains(@class, 's-item')][2]//div[contains(@class,'s-item')]/span[contains(@class,'s-item__price')])'
+INFO  | 2023-09-23 08:05:55 | [main] keywords.WebUI (WebUI.java:findElementsWithParam:1480) - Timeout: '0.022'
+INFO  | 2023-09-23 08:05:55 | [main] keywords.WebUI (WebUI.java:scrollToElementCenter:1517) - Scrolled to element: [[EdgeDriver: msedge on windows (224224c52ce3dd1704cf7594d8339854)] -> xpath: (//li[@id]//a[@class='s-item__link'])]
+INFO  | 2023-09-23 08:05:59 | [main] keywords.WebUI (WebUI.java:delayInSecond:999) - Delayed '4' seconds
+INFO  | 2023-09-23 08:05:59 | [main] keywords.WebUI (WebUI.java:getElementText:690) - Text of web element located by '[[EdgeDriver: msedge on windows (224224c52ce3dd1704cf7594d8339854)] -> xpath: (//li[@id]//a[@class='s-item__link'])]' is 'NEW LISTINGApple iPhone 11 A2221 (CDMA + GSM) - 64GB - (PRODUCT)RED (Ohne Simlock)...
+Opens in a new window or tab'
+INFO  | 2023-09-23 08:05:59 | [main] keywords.WebUI (WebUI.java:findElementsWithParam:1451) - Finding web elements located by '(//ul[contains(@class, 'srp-results')]/li[contains(@class, 's-item')][3]//div[contains(@class,'s-item')]/span[contains(@class,'s-item__price')])'
+INFO  | 2023-09-23 08:05:59 | [main] keywords.WebUI (WebUI.java:findElementsWithParam:1473) - Found 2 web elements located by '(//ul[contains(@class, 'srp-results')]/li[contains(@class, 's-item')][3]//div[contains(@class,'s-item')]/span[contains(@class,'s-item__price')])'
+INFO  | 2023-09-23 08:05:59 | [main] keywords.WebUI (WebUI.java:findElementsWithParam:1480) - Timeout: '0.021'
+INFO  | 2023-09-23 08:05:59 | [main] keywords.WebUI (WebUI.java:scrollToElementCenter:1517) - Scrolled to element: [[EdgeDriver: msedge on windows (224224c52ce3dd1704cf7594d8339854)] -> xpath: (//li[@id]//a[@class='s-item__link'])]
+INFO  | 2023-09-23 08:06:03 | [main] keywords.WebUI (WebUI.java:delayInSecond:999) - Delayed '4' seconds
+INFO  | 2023-09-23 08:06:03 | [main] keywords.WebUI (WebUI.java:getElementText:690) - Text of web element located by '[[EdgeDriver: msedge on windows (224224c52ce3dd1704cf7594d8339854)] -> xpath: (//li[@id]//a[@class='s-item__link'])]' is 'Apple iPhone 11 - 128GB - Black (Unlocked) - CRACK GLASS
+Opens in a new window or tab'
+INFO  | 2023-09-23 08:06:03 | [main] keywords.WebUI (WebUI.java:findElementsWithParam:1451) - Finding web elements located by '(//ul[contains(@class, 'srp-results')]/li[contains(@class, 's-item')][4]//div[contains(@class,'s-item')]/span[contains(@class,'s-item__price')])'
+INFO  | 2023-09-23 08:06:03 | [main] keywords.WebUI (WebUI.java:findElementsWithParam:1473) - Found 1 web elements located by '(//ul[contains(@class, 'srp-results')]/li[contains(@class, 's-item')][4]//div[contains(@class,'s-item')]/span[contains(@class,'s-item__price')])'
+INFO  | 2023-09-23 08:06:03 | [main] keywords.WebUI (WebUI.java:findElementsWithParam:1480) - Timeout: '0.026'
+INFO  | 2023-09-23 08:06:03 | [main] keywords.WebUI (WebUI.java:scrollToElementCenter:1517) - Scrolled to element: [[EdgeDriver: msedge on windows (224224c52ce3dd1704cf7594d8339854)] -> xpath: (//li[@id]//a[@class='s-item__link'])]
+INFO  | 2023-09-23 08:06:07 | [main] keywords.WebUI (WebUI.java:delayInSecond:999) - Delayed '4' seconds
+INFO  | 2023-09-23 08:06:07 | [main] keywords.WebUI (WebUI.java:getElementText:690) - Text of web element located by '[[EdgeDriver: msedge on windows (224224c52ce3dd1704cf7594d8339854)] -> xpath: (//li[@id]//a[@class='s-item__link'])]' is 'APPLE IPHONE 11 PRO MAX 64GB Midnight Green (KEIN Simlock, 84% Akku, GUT)
+Opens in a new window or tab'
+INFO  | 2023-09-23 08:06:07 | [main] keywords.WebUI (WebUI.java:findElementsWithParam:1451) - Finding web elements located by '(//ul[contains(@class, 'srp-results')]/li[contains(@class, 's-item')][5]//div[contains(@class,'s-item')]/span[contains(@class,'s-item__price')])'
+INFO  | 2023-09-23 08:06:07 | [main] keywords.WebUI (WebUI.java:findElementsWithParam:1473) - Found 1 web elements located by '(//ul[contains(@class, 'srp-results')]/li[contains(@class, 's-item')][5]//div[contains(@class,'s-item')]/span[contains(@class,'s-item__price')])'
+INFO  | 2023-09-23 08:06:07 | [main] keywords.WebUI (WebUI.java:findElementsWithParam:1480) - Timeout: '0.03'
+INFO  | 2023-09-23 08:06:10 | [main] keywords.WebUI (WebUI.java:delayInSecond:999) - Delayed '3' seconds
+INFO  | 2023-09-23 08:06:10 | [main] test.BaseTest (BaseTest.java:afterMethod:100) - ==================After Method: P001_should_show_output_after_search
+INFO  | 2023-09-23 08:06:10 | [main] test.BaseTest (BaseTest.java:afterClass:108) - =====================After Class: test.TestSearch
+INFO  | 2023-09-23 08:06:10 | [main] keywords.WebUI (WebUI.java:closeBrowser:55) - Closing the browser
+INFO  | 2023-09-23 08:06:11 | [main] keywords.WebUI (WebUI.java:closeBrowser:58) - Closed the browser successfully
