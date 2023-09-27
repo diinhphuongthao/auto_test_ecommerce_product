@@ -24,7 +24,7 @@ public class TestSearch extends BaseTest {
         objAmazon.inputSearch();
         webUI.delayInSecond(3);
         SoftAssert softAssertion = new SoftAssert();
-        softAssertion.assertTrue(objAmazon.isSearch());
+        softAssertion.assertTrue(objAmazon.findListProductSearch());
         webUI.delayInSecond(2);
         objEbay = objAmazon.goToEbayPage();
         objEbay.inputSearch();

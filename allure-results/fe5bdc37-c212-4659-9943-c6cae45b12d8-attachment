@@ -1,0 +1,7 @@
+ERROR: Cannot find web element located by 'By.xpath: //input[@id='twotabsearchtextbox']'. Root cause: Error communicating with the remote browser. It may have died.
+Build info: version: '4.12.0', revision: '249f2a7d1b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.17'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [3fc87ca7f61456ab43c8961e49f916b9, findElement [using, value]]
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 117.0.2045.36, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:52622}, msedge: {msedgedriverVersion: 117.0.2045.43 (fe8879882c1b..., userDataDir: C:\Users\tieuh\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52622/devtoo..., se:cdpVersion: 117.0.2045.36, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3fc87ca7f61456ab43c8961e49f916b9

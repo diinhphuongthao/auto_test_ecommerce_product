@@ -1,12 +1,14 @@
 package keywords;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import io.qameta.allure.Attachment;
-import keywords.drivers.DriverManager;
-import keywords.drivers.DriverManagerFactory;
-import keywords.drivers.DriverType;
+
 import keywords.helper.AllureLogger;
 import keywords.helper.LogHelper;
 import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.*;
 import org.slf4j.Logger;
@@ -22,17 +24,22 @@ public class WebUI {
 
     private static final int defaultTimeOut = 60;
     private static final Logger logger = LogHelper.getLogger();
-    //  private WebDriver driver; //global variable
-    private static DriverManager driverManager;
-
-
-    //Chrome, chrome, ChRome => CHROME
+    private static WebDriver driver;
     public void openBrowser(String browser, String... url) {
         logger.info(MessageFormat.format("Launching {0}", browser.toUpperCase()));
-        WebDriver driver = null;
         try {
-            driverManager = DriverManagerFactory.getManager(DriverType.valueOf(browser.toUpperCase()));
-            driver = driverManager.getDriver();
+            switch (browser.toUpperCase()) {
+                case "CHROME":
+                    WebDriverManager.chromedriver().setup();
+                    ChromeOptions options = new ChromeOptions();
+                    options.addArguments("--remote-allow-origins=*");
+                    driver = new ChromeDriver(options); //local variable
+                    break;
+                case "EDGE":
+                    WebDriverManager.firefoxdriver().setup();
+                    driver = new EdgeDriver();
+                    break;
+            }
             logger.info(MessageFormat.format("Launched {0} successfully", browser.toUpperCase()));
         } catch (Exception e) {
             logger.error(
@@ -54,7 +61,7 @@ public class WebUI {
     public void closeBrowser() {
         logger.info("Closing the browser");
         try {
-            driverManager.quitDriver();
+            driver.close();
             logger.info("Closed the browser successfully");
         } catch (Exception e) {
             logger.info(
@@ -65,7 +72,7 @@ public class WebUI {
     public String getTitle() {
         logger.info("Getting title of the page");
         String title = null;
-        WebDriver driver = driverManager.getDriver();
+//        WebDriver driver = driverManager.getDriver();
         try {
             title = driver.getTitle();
             logger.info(MessageFormat.format("Title is ''{0}''", title));
@@ -79,7 +86,7 @@ public class WebUI {
     public String getUrl() {
         logger.info("Getting url of the page");
         String url = null;
-        WebDriver driver = driverManager.getDriver();
+//        WebDriver driver = driverManager.getDriver();
         try {
             url = driver.getCurrentUrl();
             logger.info(MessageFormat.format("Url of the page is ''{0}''", url));
@@ -90,8 +97,7 @@ public class WebUI {
         return url;
     }
 
-    public static void navigateToUrl(String url) {
-        WebDriver driver = driverManager.getDriver();
+    public void navigateToUrl(String url) {
         try {
             logger.info(MessageFormat.format("Navigating to ''{0}''", url));
             driver.navigate().to(url);
@@ -104,7 +110,7 @@ public class WebUI {
     }
 
     public void forward() {
-        WebDriver driver = driverManager.getDriver();
+//        WebDriver driver = driverManager.getDriver();
         try {
             logger.info("Forwarding to next page");
             driver.navigate().forward();
@@ -116,7 +122,7 @@ public class WebUI {
     }
 
     public void back() {
-        WebDriver driver = driverManager.getDriver();
+//        WebDriver driver = driverManager.getDriver();
         try {
             logger.info("Backing to next page");
             driver.navigate().back();
@@ -129,7 +135,7 @@ public class WebUI {
 
     //Thực hiện phóng to cửa sổ
     public void maximizeWindow() {
-        WebDriver driver = driverManager.getDriver();
+//        WebDriver driver = driverManager.getDriver();
         try {
             driver.manage().window().maximize();
             logger.info("Window maximized successfully");
@@ -144,7 +150,7 @@ public class WebUI {
         int waitTime = timeOut.length != 0 ? timeOut[0] : defaultTimeOut;
         logger.info(MessageFormat.format("Finding web element located by ''{0}''", locator));
         AllureLogger.info(MessageFormat.format("Finding web element located by ''{0}''", locator));
-        WebDriver driver = driverManager.getDriver();
+//        WebDriver driver = driverManager.getDriver();
         try {
             Wait wait = new FluentWait(driver).withTimeout(Duration.ofSeconds(waitTime))
                     .pollingEvery(Duration.ofSeconds(5)).ignoring(NoSuchElementException.class);
@@ -171,7 +177,7 @@ public class WebUI {
 
 
     public void setImplicitlyWait(int seconds) {
-        WebDriver driver = driverManager.getDriver();
+//        WebDriver driver = driverManager.getDriver();
 //    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(seconds));
         driver.manage().timeouts().implicitlyWait(seconds, TimeUnit.SECONDS);
     }
@@ -184,7 +190,7 @@ public class WebUI {
         long endTime = 0;
         double total;
         int waitTime = timeOut.length != 0 ? timeOut[0] : defaultTimeOut;
-        WebDriver driver = driverManager.getDriver();
+//        WebDriver driver = driverManager.getDriver();
         try {
             startTime = System.currentTimeMillis();
 //      element = driver.findElement(findBy(locator));
@@ -222,7 +228,7 @@ public class WebUI {
     public List<WebElement> findElements(By locator) {
         List<WebElement> elements = null;
         logger.info(MessageFormat.format("Finding web element located by ''{0}''", locator));
-        WebDriver driver = driverManager.getDriver();
+//        WebDriver driver = driverManager.getDriver();
         try {
             elements = driver.findElements(locator);
             logger.info(
@@ -237,7 +243,7 @@ public class WebUI {
     }
 
     public List<WebElement> findElements(String locator) {
-        WebDriver driver = driverManager.getDriver();
+//        WebDriver driver = driverManager.getDriver();
         List<WebElement> elements = null;
         logger.info(MessageFormat.format("Finding web element located by ''{0}''", locator));
         try {
@@ -875,7 +881,7 @@ public class WebUI {
 
     //Thực hiện Scroll down
     public void scrollDown() {
-        WebDriver driver = driverManager.getDriver();
+//        WebDriver driver = driverManager.getDriver();
         try {
             JavascriptExecutor js = (JavascriptExecutor) driver;
             js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
@@ -887,7 +893,7 @@ public class WebUI {
 
     public void waitFor(ExpectedCondition<Boolean> condition, int timeoutInSeconds) {
 //    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeoutInSeconds));
-        WebDriver driver = driverManager.getDriver();
+//        WebDriver driver = driverManager.getDriver();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeoutInSeconds));
         try {
             wait.until(condition);
@@ -1005,7 +1011,7 @@ public class WebUI {
     public boolean waitForElementVisible(String locator, int... timeOut) {
         WebElement we = findElement(findBy(locator));
         int waitTime = timeOut.length > 0 ? timeOut[0] : defaultTimeOut; // ? :
-        WebDriver driver = driverManager.getDriver();
+//        WebDriver driver = driverManager.getDriver();
         try {
             logger.info(
                     MessageFormat.format("Waiting for web element located by ''{0}'' visible", locator));
@@ -1034,7 +1040,7 @@ public class WebUI {
 
     public void clickJS(String locator) {
         WebElement we = findElement(locator);
-        WebDriver driver = driverManager.getDriver();
+//        WebDriver driver = driverManager.getDriver();
         try {
             logger.info(MessageFormat.format("Clicking web element located by ''{0}''", locator));
             JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -1048,7 +1054,7 @@ public class WebUI {
     }
 
     public void acceptAlert() {
-        WebDriver driver = driverManager.getDriver();
+//        WebDriver driver = driverManager.getDriver();
         try {
             logger.info("Accepting alert");
             Alert alert = driver.switchTo().alert();
@@ -1061,7 +1067,7 @@ public class WebUI {
     }
 
     public void dismissAlert() {
-        WebDriver driver = driverManager.getDriver();
+//        WebDriver driver = driverManager.getDriver();
         try {
             logger.info("Dismissing alert");
             Alert alert = driver.switchTo().alert();
@@ -1075,7 +1081,7 @@ public class WebUI {
 
     public String getAlertText() {
         String text = null;
-        WebDriver driver = driverManager.getDriver();
+//        WebDriver driver = driverManager.getDriver();
         try {
             logger.info("Getting alert text");
             Alert alert = driver.switchTo().alert();
@@ -1089,7 +1095,7 @@ public class WebUI {
     }
 
     public void setAlertText(String text) {
-        WebDriver driver = driverManager.getDriver();
+//        WebDriver driver = driverManager.getDriver();
         try {
             logger.info(MessageFormat.format("Setting alert text: ''{0}''", text));
             Alert alert = driver.switchTo().alert();
@@ -1102,7 +1108,7 @@ public class WebUI {
     }
 
     public void clickUsingActions(String locator) {
-        WebDriver driver = driverManager.getDriver();
+//        WebDriver driver = driverManager.getDriver();
         WebElement element = findElement(locator);
         if (element != null) {
             try {
@@ -1122,14 +1128,10 @@ public class WebUI {
     }
 
     public void clickUsingActions(WebElement we) {
-        WebDriver driver = driverManager.getDriver();
+//        WebDriver driver = driverManager.getDriver();
         if (we != null) {
             try {
                 Actions actions = new Actions(driver);
-//        actions.moveToElement(we);
-//        actions.click();
-//        Action action = actions.build();
-//        action.perform();
                 actions.moveToElement(we).click().build().perform();
                 logger.info("Clicked element: " + we);
             } catch (Exception e) {
@@ -1141,7 +1143,7 @@ public class WebUI {
     }
 
     public void clickOffset(WebElement we, int offsetX, int offsetY) {
-        WebDriver driver = driverManager.getDriver();
+//        WebDriver driver = driverManager.getDriver();
         if (we != null) {
             try {
                 Actions actions = new Actions(driver);
@@ -1155,7 +1157,7 @@ public class WebUI {
     }
 
     public void clickOffset(String locator, int offsetX, int offsetY) {
-        WebDriver driver = driverManager.getDriver();
+//        WebDriver driver = driverManager.getDriver();
         WebElement we = findElement(locator);
         if (we != null) {
             try {
@@ -1170,7 +1172,7 @@ public class WebUI {
     }
 
     public void dragAndDropByOffset(String locator, int offsetX, int offsetY) {
-        WebDriver driver = driverManager.getDriver();
+//        WebDriver driver = driverManager.getDriver();
         WebElement we = findElement(locator);
         logger.info(MessageFormat
                 .format("Dragging web element located by {0} to [{1},{2}]", locator, offsetX, offsetY));
@@ -1190,7 +1192,7 @@ public class WebUI {
     }
 
     public void dragAndDropToElement(String sourceElement, String destinationElement) {
-        WebDriver driver = driverManager.getDriver();
+//        WebDriver driver = driverManager.getDriver();
         WebElement sourceWe = findElement(sourceElement);
         WebElement destinationWe = findElement(destinationElement);
         logger.info(MessageFormat
@@ -1214,7 +1216,7 @@ public class WebUI {
     }
 
     public Object executeJavascript(String script, Object... args) {
-        WebDriver driver = driverManager.getDriver();
+//        WebDriver driver = driverManager.getDriver();
         try {
             if (args != null) {
                 logger.info(
@@ -1247,7 +1249,7 @@ public class WebUI {
 
     @Attachment(value = "ScreenShot", type = "image/png")
     public byte[] takeScreenShot() {
-        WebDriver driver = driverManager.getDriver();
+//        WebDriver driver = driverManager.getDriver();
         byte[] image = null;
         try {
             logger.info("Taking screenshot");
@@ -1261,7 +1263,7 @@ public class WebUI {
 
     @Attachment(value = "ScreenShot", type = "image/png")
     public byte[] takeScreenShotAndHighLightElement(String locator) {
-        WebDriver driver = driverManager.getDriver();
+//        WebDriver driver = driverManager.getDriver();
         byte[] image = null;
         try {
             logger.info(MessageFormat.format("Highlight web element located by ''{0}'' and taking screenshot", locator));
@@ -1280,7 +1282,7 @@ public class WebUI {
     }
 
     public void scrollToElement(String locator) {
-        WebDriver driver = driverManager.getDriver();
+//        WebDriver driver = driverManager.getDriver();
         WebElement we = findElement(findBy(locator));
         try {
             logger.info(MessageFormat.format("Scrolling in to web element located by ''{0}''", locator));
@@ -1295,7 +1297,7 @@ public class WebUI {
     }
 
     public void mouseOver(String locator) {
-        WebDriver driver = driverManager.getDriver();
+//        WebDriver driver = driverManager.getDriver();
         WebElement element = findElement(locator);
         if (element != null)
             ;
@@ -1329,7 +1331,7 @@ public class WebUI {
     }
 
     public void switchToIFrame(String locator) {
-        WebDriver driver = driverManager.getDriver();
+//        WebDriver driver = driverManager.getDriver();
         WebElement we = findElement(findBy(locator));
         logger.info(MessageFormat.format("Switching to frame located by ''{0}''", locator));
         try {
@@ -1343,7 +1345,7 @@ public class WebUI {
     }
 
     public void switchToDefaultContext() {
-        WebDriver driver = driverManager.getDriver();
+//        WebDriver driver = driverManager.getDriver();
         logger.info("Switching to default context");
         try {
             driver.switchTo().defaultContent();
@@ -1399,7 +1401,7 @@ public class WebUI {
     }
 
     public void navigateBackIfPossible(String previousPageURL) {
-        WebDriver driver = driverManager.getDriver();
+//        WebDriver driver = driverManager.getDriver();
         String currentURL = driver.getCurrentUrl();
         if (previousPageURL != null && !previousPageURL.equals(currentURL)) {
             driver.navigate().back();
@@ -1412,7 +1414,7 @@ public class WebUI {
         String finalLocator = locator.replace("${param}", param);
         WebElement element = null;
         logger.info(MessageFormat.format("Finding web element located by ''{0}''", finalLocator));
-        WebDriver driver = driverManager.getDriver();
+//        WebDriver driver = driverManager.getDriver();
         long startTime = 0;
         long endTime = 0;
         double total;
@@ -1449,7 +1451,7 @@ public class WebUI {
         List<WebElement> elements = new ArrayList<>();
         String finalLocator = locator.replace("${param}", param);
         logger.info(MessageFormat.format("Finding web elements located by ''{0}''", finalLocator));
-        WebDriver driver = driverManager.getDriver();
+//        WebDriver driver = driverManager.getDriver();
         long startTime = 0;
         long endTime = 0;
         double total;
@@ -1483,7 +1485,7 @@ public class WebUI {
 
 
     public void scrollToElementCenter(String locator) {
-        WebDriver driver = driverManager.getDriver();
+//        WebDriver driver = driverManager.getDriver();
         WebElement we = findElement(findBy(locator));
         if (we != null) {
             try {
@@ -1503,7 +1505,7 @@ public class WebUI {
     }
 
     public void scrollToElementCenter(WebElement we) {
-        WebDriver driver = driverManager.getDriver();
+//        WebDriver driver = driverManager.getDriver();
         //WebElement we = findElement(locator);
         if (we != null) {
             try {
@@ -1524,13 +1526,13 @@ public class WebUI {
 
     // Thêm phương thức mở trình duyệt mới
     public void openNewTab() {
-        WebDriver driver = driverManager.getDriver();
+//        WebDriver driver = driverManager.getDriver();
         ((JavascriptExecutor) driver).executeScript("window.open('', '_blank');");
     }
 
     // Thêm phương thức chuyển đến tab cụ thể
     public void switchToTab(int tabIndex) {
-        WebDriver driver = driverManager.getDriver();
+//        WebDriver driver = driverManager.getDriver();
         ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
         if (tabIndex >= 0 && tabIndex < tabs.size()) {
             driver.switchTo().window(tabs.get(tabIndex));

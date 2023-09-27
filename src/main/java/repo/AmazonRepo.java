@@ -9,6 +9,6 @@ public class AmazonRepo {
     public static final String LBL_PRODUCT_PRICE = "//span[@class='a-price-whole']\n";
     public static final String LBL_PRODUCT_ITEM = "//div[@data-component-type=\"s-search-result\" and contains(@class, \"sg-col-20-of-24\")]";
     public static final String LST_PRODUCT_NAMES = "//div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//h2//a//span";
-        public static final String LST_PRODUCT_PRICES = "//div[@data-component-type='s-search-result'][${param}]//div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//a/span[@class='a-price']";
-
+    public static final String LST_PRODUCT_PRICES = "//div[@data-component-type='s-search-result'][${param}]//div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//a/span[@class='a-price']";
+ //   public static final String LST_PRODUCT_PRICES = "[${param}]//div[starts-with(@cel_widget_id,'MAIN-SEARCH_RESULTS')]//a/span[@class='a-price']";
 }

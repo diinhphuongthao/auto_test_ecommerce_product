@@ -3,7 +3,6 @@ package test;
 import com.jayway.jsonpath.JsonPath;
 import io.qameta.allure.Step;
 import keywords.WebUI;
-import keywords.helper.FileHelper;
 import keywords.helper.LogHelper;
 import org.slf4j.Logger;
 import org.testng.annotations.*;
@@ -106,35 +105,6 @@ public class BaseTest {
     @AfterClass
     public void afterClass() {
         logger.info("=====================After Class: " + TestSearch.class.getName());
-    }
-
-    public String getDataFile() {
-        String strClassName = getCallerClass(3).getSimpleName();
-        return this.dataFile.get(strClassName);
-    }
-
-    public String setDataFile(String dataFileName) {
-        if (this.dataFile == null) {
-            this.dataFile = new HashMap<>();
-        }
-        String strClassName = getCallerClass(2).getSimpleName();
-
-        dataFileName = FileHelper.getDataJSONFilePath(dataFileName);
-        return this.dataFile.put(strClassName, dataFileName);
-    }
-
-    public String findTestData(String name) {
-        String dataFile = this.getDataFile();
-//    logger.info("Data file: " + dataFile);
-        try {
-            File jsonRepoFile = new File(dataFile);
-            return JsonPath.read(jsonRepoFile, "$." + name).toString();
-        } catch (Exception e) {
-            logger.error(
-                    MessageFormat.format("Cannot find test data with name ''{0}''. Root cause: {1}", name,
-                            e.getMessage()));
-        }
-        return null;
     }
 
     @Step("Go to Amazon page")

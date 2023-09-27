@@ -15,7 +15,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <log4j.version>1.2.12</log4j.version>
         <slf4j.verion>1.7.36</slf4j.verion>
-        <selenium.version>4.11.0</selenium.version>
+        <selenium.version>4.12.0</selenium.version>
         <webdrivermanager.version>5.4.0</webdrivermanager.version>
         <testng.version>7.8.0</testng.version>
         <allure-testng.version>2.23.0</allure-testng.version>
@@ -25,9 +25,6 @@
         <cucumber-java.version>7.13.0</cucumber-java.version>
         <allure.cucumber7.jvm.version>2.23.0</allure.cucumber7.jvm.version>
         <cucumber.gherkin.version>26.2.0</cucumber.gherkin.version>
-
-        <allure-results.dir>${project.basedir}/target</allure-results.dir>
-
     </properties>
 
     <dependencies>
@@ -86,6 +83,7 @@
             <artifactId>json-path</artifactId>
             <version>${json-path.version}</version>
         </dependency>
+
         <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
         <dependency>
             <groupId>io.cucumber</groupId>
@@ -99,6 +97,7 @@
             <artifactId>cucumber-testng</artifactId>
             <version>${cucumber-java.version}</version>
         </dependency>
+
         <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-picocontainer -->
         <dependency>
             <groupId>io.cucumber</groupId>
@@ -106,13 +105,13 @@
             <version>${cucumber-java.version}</version>
         </dependency>
 
-
         <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
         <dependency>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-compiler-plugin</artifactId>
             <version>${maven.compiler.version}</version>
         </dependency>
+
         <!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-cucumber7-jvm -->
         <dependency>
             <groupId>io.qameta.allure</groupId>
@@ -126,16 +125,7 @@
             <artifactId>gherkin</artifactId>
             <version>${cucumber.gherkin.version}</version>
         </dependency>
-        <dependency>
-            <groupId>org.apache.poi</groupId>
-            <artifactId>poi</artifactId>
-            <version>5.0.0</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.poi</groupId>
-            <artifactId>poi-ooxml</artifactId>
-            <version>5.0.0</version>
-        </dependency>
+
     </dependencies>
 
     <build>
@@ -154,7 +144,7 @@
                 <version>${maven-surefire-plugin-version}</version>
                 <configuration>
                     <suiteXmlFiles>
-                        <suiteXmlFile>TestNG.xml</suiteXmlFile>
+                        <suiteXmlFile>${project.basedir}/src/main/resources/testsuites/${testsuite}.xml</suiteXmlFile>
                     </suiteXmlFiles>
                     <argLine>
                         -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
@@ -171,6 +161,5 @@
             </plugin>
         </plugins>
     </build>
-
 
 </project>

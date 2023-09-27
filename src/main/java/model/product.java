@@ -2,13 +2,13 @@ package model;
 
 public class product {
     private String name;
-    private String price;
+    private double price;
 
     public String getName() {
         return name;
     }
 
-    public String getPrice() {
+    public double getPrice() {
         return price;
     }
 
@@ -16,11 +16,11 @@ public class product {
         this.name = name;
     }
 
-    public void setPrice(String price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 
-    public product(String name, String price) {
+    public product(String name, double price) {
         this.name = name;
         this.price = price;
     }
@@ -32,4 +32,5 @@ public class product {
                 ", price='" + price + '\'' +
                 '}';
     }
+
 }
